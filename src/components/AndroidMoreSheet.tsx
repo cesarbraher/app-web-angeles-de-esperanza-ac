@@ -1,6 +1,7 @@
 import {
   Briefcase,
   ChevronRight,
+  ExternalLink,
   FileText,
   Landmark,
   MapPin,
@@ -114,6 +115,25 @@ export function AndroidMoreSheet({
         </div>
 
         <div className="overflow-y-auto px-5 py-4 space-y-5">
+          {/* Primary External Platform CTA */}
+          <a
+            href={INSTITUTION_INFO.sistemaAngelesUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={onClose}
+            className="w-full min-h-[60px] flex items-center justify-between gap-3 rounded-2xl bg-[#DC2626] hover:bg-red-700 active:scale-[0.99] px-5 py-3.5 text-white shadow-md shadow-red-600/25 transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#DC2626]"
+          >
+            <div className="min-w-0">
+              <p className="font-display text-xl font-bold tracking-wider uppercase leading-tight">
+                SISTEMA ÁNGELES
+              </p>
+              <p className="text-xs text-red-100 font-mono truncate">
+                braher.org/angeles
+              </p>
+            </div>
+            <ExternalLink className="w-5 h-5 shrink-0" />
+          </a>
+
           {/* Quick Direct Android Intents */}
           <div className="grid grid-cols-3 gap-2.5">
             <a

@@ -1,4 +1,4 @@
-import { ArrowRight, MessageCircle, Phone } from 'lucide-react';
+import { ArrowRight, ExternalLink, MessageCircle, Phone } from 'lucide-react';
 import {
   ADMISSION_PARAMS,
   INSTITUTION_INFO,
@@ -47,23 +47,37 @@ export function HomeView({ onNavigate }: HomeViewProps) {
               </p>
             </div>
 
-            <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
-              <button
-                type="button"
-                onClick={() => onNavigate('contacto')}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-[#DC2626] text-white text-sm font-semibold hover:bg-red-700 transition-colors cursor-pointer whitespace-nowrap shrink-0"
+            <div className="w-full max-w-xl space-y-3.5 pt-2">
+              <a
+                href={INSTITUTION_INFO.sistemaAngelesUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full inline-flex items-center justify-center gap-3 px-8 py-4 sm:py-5 rounded-xl bg-[#DC2626] hover:bg-red-700 active:scale-[0.99] text-white shadow-lg shadow-red-600/25 ring-2 ring-red-600/20 transition-all cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#DC2626]"
               >
-                Solicitar Valoración Voluntaria
-                <ArrowRight className="w-4 h-4" />
-              </button>
+                <span className="font-display text-2xl sm:text-3xl font-bold tracking-wider uppercase leading-none">
+                  SISTEMA ÁNGELES
+                </span>
+                <ExternalLink className="w-6 h-6 shrink-0" />
+              </a>
 
-              <button
-                type="button"
-                onClick={() => onNavigate('programa')}
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-md border border-slate-300 bg-white text-slate-800 text-sm font-medium hover:border-slate-400 hover:bg-slate-50 transition-colors cursor-pointer whitespace-nowrap shrink-0"
-              >
-                Explorar Modelo Clínico
-              </button>
+              <div className="flex flex-wrap items-center justify-center gap-3">
+                <button
+                  type="button"
+                  onClick={() => onNavigate('contacto')}
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-[#1D4ED8] text-white text-sm font-semibold hover:bg-blue-800 transition-colors cursor-pointer whitespace-nowrap shrink-0"
+                >
+                  Solicitar Valoración Voluntaria
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => onNavigate('programa')}
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md border border-slate-300 bg-white text-slate-800 text-sm font-medium hover:border-slate-400 hover:bg-slate-50 transition-colors cursor-pointer whitespace-nowrap shrink-0"
+                >
+                  Explorar Modelo Clínico
+                </button>
+              </div>
             </div>
           </div>
 

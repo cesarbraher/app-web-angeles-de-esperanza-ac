@@ -201,6 +201,7 @@ export const INSTITUTION_INFO = {
     claveCatastral: '11 003 017 01 0001 011 090 00021 00 0000',
   },
   website: 'https://www.angelesdeesperanzaac.org',
+  sistemaAngelesUrl: 'https://braher.org/angeles',
   phoneFixed: '+52 462 635 5929',
   phoneFixedRaw: '524626355929',
   whatsapp: '+52 462 284 5966',

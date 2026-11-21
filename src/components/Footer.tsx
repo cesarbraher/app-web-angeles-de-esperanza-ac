@@ -1,4 +1,5 @@
-import type { PageRoute } from '../data/aeacData';
+import { ExternalLink } from 'lucide-react';
+import { INSTITUTION_INFO, type PageRoute } from '../data/aeacData';
 
 interface FooterProps {
   onNavigate: (route: PageRoute) => void;
@@ -21,6 +22,27 @@ export function Footer({ onNavigate }: FooterProps) {
   return (
     <footer className="bg-slate-900 text-slate-300 border-t border-slate-800 mt-14 lg:mt-20 pb-20 lg:pb-0">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 space-y-5">
+        <div className="border-b border-slate-800 pb-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div className="space-y-1">
+            <p className="text-xs font-semibold uppercase tracking-wider text-red-400">
+              Acceso Directo a Plataforma
+            </p>
+            <p className="text-sm text-slate-300">
+              Ingresa al portal oficial en{' '}
+              <span className="font-mono text-white">braher.org/angeles</span>
+            </p>
+          </div>
+          <a
+            href={INSTITUTION_INFO.sistemaAngelesUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-lg bg-[#DC2626] hover:bg-red-700 active:scale-[0.98] text-white font-display text-lg font-bold tracking-wider uppercase shadow-lg shadow-red-950/40 transition-all whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+          >
+            <span>SISTEMA ÁNGELES</span>
+            <ExternalLink className="w-5 h-5 shrink-0" />
+          </a>
+        </div>
+
         <nav
           aria-label="Mapa del sitio"
           className="border-b border-slate-800 pb-5 flex flex-col sm:flex-row sm:items-center justify-between gap-3"
