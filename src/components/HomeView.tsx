@@ -8,6 +8,7 @@ import {
   TEAM_MEMBERS,
   type PageRoute,
 } from '../data/aeacData';
+import { GooglePlaceSection } from './GooglePlaceSection';
 import { HeroEmblemSvg } from './HeroEmblemSvg';
 import { VideoGalleryPlayer } from './VideoGalleryPlayer';
 
@@ -101,7 +102,13 @@ export function HomeView({ onNavigate }: HomeViewProps) {
         {/* Operational Utility Ribbon */}
         <div className="mt-4 px-5 py-3.5 bg-slate-900 text-slate-100 rounded-lg flex flex-col md:flex-row md:items-center justify-between gap-3 text-xs sm:text-sm">
           <p className="text-slate-300">
-            Sede Operativa: <span className="text-white font-medium">Calle Plan de Iguala #1855, Col. Guerrero, Irapuato, Gto.</span>
+            Sede Operativa:{' '}
+            <a
+              href="#ubicacion-google-maps"
+              className="text-white font-medium hover:underline"
+            >
+              Calle Plan de Iguala #1855, Col. Guerrero, Irapuato, Gto.
+            </a>
           </p>
           <div className="flex flex-wrap items-center gap-5 font-mono text-xs tabular-nums">
             <a
@@ -283,6 +290,9 @@ export function HomeView({ onNavigate }: HomeViewProps) {
           </div>
         </div>
       </section>
+
+      {/* Verified Google Maps Place, Stars, Reviews & Interactive Map */}
+      <GooglePlaceSection onNavigate={onNavigate} />
 
       {/* Unified Institutional Video Player */}
       <VideoGalleryPlayer />

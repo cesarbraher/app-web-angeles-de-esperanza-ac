@@ -12,6 +12,7 @@ import {
   X,
 } from 'lucide-react';
 import { INSTITUTION_INFO, type PageRoute } from '../data/aeacData';
+import { GOOGLE_PLACE_INFO } from '../data/googlePlaceData';
 import { PWAInstallButton } from './PWAInstallButton';
 
 interface AndroidMoreSheetProps {
@@ -155,7 +156,7 @@ export function AndroidMoreSheet({
             </a>
 
             <a
-              href={INSTITUTION_INFO.mapsQueryUrl}
+              href={GOOGLE_PLACE_INFO.shortUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="min-h-[56px] flex flex-col items-center justify-center gap-1 rounded-xl border border-slate-200 bg-[#FAF9F6] p-2.5 text-center hover:border-[#DC2626] transition-colors"
