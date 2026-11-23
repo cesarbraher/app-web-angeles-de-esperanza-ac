@@ -55,8 +55,8 @@ export function ContactView() {
     }
     if (form.edadPaciente.trim()) {
       const age = Number(form.edadPaciente);
-      if (Number.isNaN(age) || age < 18 || age > 50) {
-        nextErrors.edadPaciente = 'El programa residencial atiende población varonil de 18 a 50 años.';
+      if (Number.isNaN(age) || age < 18 || age > 59) {
+        nextErrors.edadPaciente = 'El programa residencial atiende a varones de 18 a 59 años.';
       }
     }
     if (form.mensaje.trim().length < 10) {
@@ -315,7 +315,7 @@ export function ContactView() {
                   Solicitud de Orientación e Ingreso Voluntario
                 </h2>
                 <p className="text-xs sm:text-sm text-slate-600">
-                  Programa residencial varonil (18 a 50 años) · 6 meses continuos.
+                  Programa residencial para varones de 18 a 59 años · 6 meses continuos.
                 </p>
               </div>
 
@@ -393,13 +393,13 @@ export function ContactView() {
                     htmlFor="edadPaciente"
                     className="block text-xs font-semibold text-slate-700"
                   >
-                    Edad del usuario (18–50)
+                    Edad del usuario (18–59)
                   </label>
                   <input
                     id="edadPaciente"
                     type="number"
                     min={18}
-                    max={50}
+                    max={59}
                     value={form.edadPaciente}
                     onChange={(e) => setForm({ ...form, edadPaciente: e.target.value })}
                     placeholder="Ej. 28"
@@ -466,7 +466,7 @@ export function ContactView() {
                     <strong className="font-semibold text-slate-900">
                       estrictamente voluntario
                     </strong>{' '}
-                    para hombres adultos de 18 a 50 años.
+                    para varones de 18 a 59 años.
                   </span>
                 </label>
                 {errors.ingresoVoluntario && (

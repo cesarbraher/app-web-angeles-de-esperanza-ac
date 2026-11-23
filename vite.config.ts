@@ -22,7 +22,7 @@ export default defineConfig(() => {
           name: 'Ángeles de Esperanza, A.C.',
           short_name: 'Ángeles A.C.',
           description:
-            'Tratamiento residencial voluntario de 6 meses para hombres de 18 a 50 años en Irapuato, Guanajuato. Rigor médico, nutrición clínica y trato digno.',
+            'Tratamiento residencial voluntario de 6 meses para varones de 18 a 59 años en Irapuato, Guanajuato. Rigor médico, nutrición clínica y trato digno.',
           theme_color: '#FAF9F6',
           background_color: '#FAF9F6',
           display: 'standalone',

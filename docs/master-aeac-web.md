@@ -58,7 +58,7 @@ El centro opera bajo el estricto cumplimiento del marco normativo federal, estat
 ---
 
 ## 5. Estructura y Modelo Clínico-Terapéutico
-* **Población Atendida:** Población varonil (hombres de 18 a 50 años).
+* **Población Atendida:** Población varonil (varones de 18 a 59 años).
 * **Carácter del Ingreso:** Estrictamente voluntario.
 * **Duración del Programa:** 6 meses de internamiento residencial continuo.
 * **Modelo Metodológico:** Basado en las **Etapas de Cambio de Prochaska y DiClemente**, adaptando las fases al estado físico, mental y emocional de cada usuario.

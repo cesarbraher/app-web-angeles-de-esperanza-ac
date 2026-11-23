@@ -1,5 +1,5 @@
-import { ArrowLeft, ExternalLink, Menu } from 'lucide-react';
-import { INSTITUTION_INFO, type PageRoute } from '../data/aeacData';
+import { ArrowLeft, Menu } from 'lucide-react';
+import type { PageRoute } from '../data/aeacData';
 import { PWAInstallButton } from './PWAInstallButton';
 
 interface HeaderProps {
@@ -16,7 +16,6 @@ const DESKTOP_NAV_ITEMS: { route: PageRoute; label: string }[] = [
   { route: 'programa', label: 'Programa' },
   { route: 'equipo', label: 'Equipo' },
   { route: 'comunidad', label: 'Comunidad' },
-  { route: 'contacto', label: 'Contacto' },
 ];
 
 const MOBILE_SCREEN_TITLES: Record<PageRoute, string> = {
@@ -51,7 +50,7 @@ export function Header({
 
   return (
     <header className="sticky top-0 z-40 bg-[#FAF9F6]/95 backdrop-blur-md border-b border-slate-200">
-      <div className="max-w-7xl mx-auto px-3 sm:px-6 h-14 lg:h-16 flex items-center justify-between gap-3 lg:gap-6">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 h-14 lg:h-16 flex items-center justify-between gap-4 lg:gap-8">
         {/* Left Zone: Mobile Back or Brand Mark */}
         <div className="flex items-center gap-2 min-w-0">
           {showMobileBack ? (
@@ -78,13 +77,12 @@ export function Header({
               />
             )}
             <span className="lg:hidden truncate">{MOBILE_SCREEN_TITLES[activeRoute]}</span>
-            <span className="hidden lg:inline xl:hidden">ÁNGELES DE ESPERANZA</span>
-            <span className="hidden xl:inline">ÁNGELES DE ESPERANZA A.C.</span>
+            <span className="hidden lg:inline">ÁNGELES DE ESPERANZA A.C.</span>
           </button>
         </div>
 
-        {/* Center Zone: Desktop Navigation */}
-        <nav aria-label="Navegación principal" className="hidden lg:flex items-center gap-4 xl:gap-6">
+        {/* Center Zone: Desktop Navigation (5 concise links) */}
+        <nav aria-label="Navegación principal" className="hidden lg:flex items-center gap-6">
           {DESKTOP_NAV_ITEMS.map((item) => {
             const isActive = activeRoute === item.route;
             return (
@@ -108,19 +106,21 @@ export function Header({
           })}
         </nav>
 
-        {/* Right Zone: Install App + Primary SISTEMA ÁNGELES CTA + Menu */}
-        <div className="flex items-center gap-2 sm:gap-2.5 shrink-0">
+        {/* Right Zone: Install App + Primary CTA / Mobile Menu */}
+        <div className="flex items-center gap-2 sm:gap-3 shrink-0">
           <PWAInstallButton variant="compact" />
 
-          <a
-            href={INSTITUTION_INFO.sistemaAngelesUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden sm:inline-flex items-center justify-center gap-2 px-4 xl:px-5 py-2 xl:py-2.5 rounded-lg bg-[#DC2626] hover:bg-red-700 active:scale-[0.98] text-white font-display text-sm xl:text-base font-bold tracking-wider uppercase shadow-sm transition-all whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#DC2626]"
+          <button
+            type="button"
+            onClick={() => onNavigate('contacto')}
+            className={`hidden lg:inline-flex items-center justify-center px-4 py-2 text-sm font-medium rounded-md whitespace-nowrap shrink-0 transition-colors duration-150 cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#DC2626] ${
+              activeRoute === 'contacto'
+                ? 'bg-slate-900 text-white'
+                : 'bg-[#DC2626] text-white hover:bg-red-700'
+            }`}
           >
-            <span>SISTEMA ÁNGELES</span>
-            <ExternalLink className="w-4 h-4 shrink-0" />
-          </a>
+            Contacto
+          </button>
 
           <button
             type="button"
@@ -131,19 +131,6 @@ export function Header({
             <Menu className="w-5 h-5" />
           </button>
         </div>
-      </div>
-
-      {/* Mobile Prominent Quick Access Bar (< sm) */}
-      <div className="sm:hidden border-t border-slate-200 bg-[#FAF9F6] px-3 py-2">
-        <a
-          href={INSTITUTION_INFO.sistemaAngelesUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-full min-h-[42px] inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-[#DC2626] hover:bg-red-700 active:scale-[0.99] text-white font-display text-base font-bold tracking-wider uppercase shadow-sm transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#DC2626]"
-        >
-          <span>SISTEMA ÁNGELES</span>
-          <ExternalLink className="w-4 h-4 shrink-0" />
-        </a>
       </div>
     </header>
   );

@@ -56,7 +56,7 @@ export function PrivacyView({ onNavigate }: PrivacyViewProps) {
           <ul className="space-y-2 text-slate-700">
             <li>· Nombre completo del solicitante o familiar responsable.</li>
             <li>· Número telefónico o WhatsApp de contacto y correo electrónico opcional.</li>
-            <li>· Relación o parentesco con el usuario y edad aproximada (rango de 18 a 50 años).</li>
+            <li>· Relación o parentesco con el usuario y edad aproximada (varones de 18 a 59 años).</li>
             <li>· Motivo de consulta y descripción breve de la situación comunicada voluntariamente.</li>
           </ul>
           <p className="text-sm text-slate-600">

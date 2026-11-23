@@ -114,7 +114,7 @@ export const PAGE_METADATA: Record<PageRoute, PageMetadata> = {
   inicio: {
     title: 'Ángeles de Esperanza, A.C. | Rehabilitación en Adicciones',
     description:
-      'Tratamiento residencial voluntario de 6 meses para hombres de 18 a 50 años en Irapuato, Guanajuato. Rigor médico, nutrición clínica y trato digno.',
+      'Tratamiento residencial voluntario de 6 meses para varones de 18 a 59 años en Irapuato, Guanajuato. Rigor médico, nutrición clínica y trato digno.',
     bannerAlt:
       'Centro de Rehabilitación en Adicciones Ángeles de Esperanza, A.C. — Juntos por una vida mejor',
   },
@@ -374,7 +374,7 @@ export const LEGAL_REGISTRIES: LegalRegistryItem[] = [
 
 export const ADMISSION_PARAMS = [
   { label: 'Modalidad', value: 'Tratamiento Residencial (Modelo Mixto)' },
-  { label: 'Población Atendida', value: 'Varonil · 18 a 50 años' },
+  { label: 'Población Atendida', value: 'Varones de 18 a 59 años' },
   { label: 'Carácter del Ingreso', value: 'Estrictamente Voluntario' },
   { label: 'Duración del Programa', value: '6 Meses Continuos' },
 ];
@@ -863,7 +863,7 @@ export const COMMUNITY_GUIDES: CommunityGuide[] = [
     sections: [
       {
         heading: 'Estabilización biológica en un entorno afectuoso',
-        body: 'Al ingresar voluntariamente, el usuario de 18 a 50 años se ubica en el área de enfermería bajo vigilancia estrecha. El médico de cabecera realiza la valoración inicial y suministra el soporte necesario para sobrellevar la abstinencia sin poner en riesgo su integridad física ni mental.',
+        body: 'Al ingresar voluntariamente, el usuario varón de 18 a 59 años se ubica en el área de enfermería bajo vigilancia estrecha. El médico de cabecera realiza la valoración inicial y suministra el soporte necesario para sobrellevar la abstinencia sin poner en riesgo su integridad física ni mental.',
       },
       {
         heading: 'Trato digno bajo estándares PRODHEG',
